@@ -1,0 +1,59 @@
+/* frontend/src/styles/index.css */
+
+/* This line is CRUCIAL for Tailwind v4.x CSS-based config.
+   It imports Tailwind's core styles and enables the @theme directive. */
+@import "tailwindcss";
+
+/* --- Tailwind CSS v4.x Theme Configuration goes here --- */
+/* This is where your custom colors, fonts, etc., are defined directly. */
+@theme {
+    /* Define your custom colors directly here */
+--primary-green: '#2e6342';     /* Your main dark green */
+--secondary-green: '#1c5739';   /* Your sidebar dark green */
+--light-bg-color: '#f8f6f2';    /* Your light background color */
+--white-text: '#f8f6f2';        /* For text that goes on dark backgrounds */
+
+
+    /* If you had other theme extensions (like custom fonts or breakpoints),
+       they would also be placed directly within the @theme block, e.g.:
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    };
+    */
+}
+/* --- END of Tailwind CSS v4.x Theme Configuration --- */
+
+
+/* Your Custom CSS remains here */
+/* (This is where styles not covered by Tailwind utilities go, like animations) */
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #9ca3af; /* gray-400 */
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: typing-animation 1.4s infinite;
+}
+
+.dark .typing-dot {
+    background-color: #6b7280; /* gray-500 */
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-animation {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-6px);
+    }
+}

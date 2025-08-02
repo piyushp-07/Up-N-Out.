@@ -1,0 +1,23 @@
+# .env files - CRITICAL: Contains API keys and sensitive info
+.env
+
+# Python virtual environment
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+
+# Node.js modules
+frontend/node_modules/
+frontend/dist/           # Frontend build output
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/.vite/          # Vite's cache folder
+
+# Operating System specific files
+.DS_Store                # macOS specific
+Thumbs.db                # Windows specific
+
+# Editor specific files (optional, but good practice)
+.vscode/
+.idea/                   # IntelliJ/WebStorm project files
